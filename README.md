@@ -39,23 +39,6 @@ To search for all documents with a given tag use:
 MyCollection.find({tags:'tagName'});
 ```
 
-## Template API
-
-Now, you're ready to use tags within your views. Supposing you have a helper:
-```javacript
-Template.myTeplate.data = function () {
-    return MyCollection.findOne({...});
-}
-```
-you can render tags attached to your data with `{{renderTags}}` helper:
-```html
-{{#with data}}
-  <ul class="...">
-    {{renderTags}}
-  </ul>
-{{/with}}
-```
-
 ## Meteor.tags
 
 Additionally, you have a read only access to `Meteor.tags` collection
